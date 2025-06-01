@@ -238,7 +238,7 @@ public final class TownCommand extends Command {
                                     Integer.toString(users.getValue().size()),
                                     users.getValue().stream()
                                         .map(user -> plugin.getLocales().getRawLocale(String.format(
-                                                "town_census_user_%s", plugin.getUserList()
+                                                "town_census_user_%s", plugin.getOnlineUsers()
                                                     .contains(user) ? "online" : "offline"
                                             ), Locales.escapeText(user.getUsername())
                                         ).orElse(Locales.escapeText(user.getUsername())))
